@@ -1,11 +1,10 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    密碼 = receivedNumber
-    basic.showString("" + (密碼))
+    basic.showNumber(receivedNumber)
+    radio.setGroup(設定 + 1)
+    radio.sendNumber(receivedNumber)
 })
-input.onButtonPressed(Button.A, function () {
-    radio.sendNumber(設定)
-})
-let 密碼 = 0
+// 第一和第二個人的廣播群族:1，後面依序2`3`4`5...
 let 設定 = 0
-radio.setGroup(1)
-設定 = 666
+設定 = 1
+radio.setGroup(設定)
+let 密碼 = 0
